@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 15% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 10%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-light: 199 89% 65%;
+    --primary-dark: 199 89% 35%;
+
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --secondary-light: 24 95% 65%;
+    --secondary-dark: 24 95% 45%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(199 89% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(24 95% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(199 89% 35%) 50%, hsl(24 95% 53%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(271 91% 65%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(199 89% 65%) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(24 95% 65%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(271 91% 65%) 0px, transparent 50%);
+    
+    --shadow-sm: 0 2px 8px -2px hsl(199 89% 48% / 0.1);
+    --shadow-md: 0 4px 16px -4px hsl(199 89% 48% / 0.15);
+    --shadow-lg: 0 8px 24px -6px hsl(199 89% 48% / 0.2);
+    --shadow-xl: 0 20px 40px -8px hsl(199 89% 48% / 0.25);
+    --shadow-glow: 0 0 32px hsl(199 89% 48% / 0.3);
+    --shadow-colored: 0 10px 40px -10px hsl(199 89% 48% / 0.35);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 15% 10%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 210 15% 10%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 210 20% 6%;
+    --foreground: 210 10% 95%;
+
+    --card: 210 20% 8%;
+    --card-foreground: 210 10% 95%;
+
+    --popover: 210 20% 8%;
+    --popover-foreground: 210 10% 95%;
+
+    --primary: 199 89% 55%;
+    --primary-foreground: 210 20% 6%;
+    
+    --primary-light: 199 89% 65%;
+    --primary-dark: 199 89% 45%;
+
+    --secondary: 24 95% 58%;
+    --secondary-foreground: 210 20% 6%;
+    
+    --secondary-light: 24 95% 68%;
+    --secondary-dark: 24 95% 48%;
+
+    --muted: 210 20% 12%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 199 89% 55%;
+    --accent-foreground: 210 20% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 16%;
+    --input: 210 20% 16%;
+    --ring: 199 89% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 55%) 0%, hsl(199 89% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(24 95% 58%) 0%, hsl(24 95% 68%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(199 89% 55%) 0%, hsl(199 89% 45%) 50%, hsl(24 95% 58%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(271 91% 65%) 0%, hsl(199 89% 55%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(199 89% 65%) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(24 95% 68%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(271 91% 65%) 0px, transparent 50%);
+    
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 24px -6px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 20px 40px -8px hsl(0 0% 0% / 0.45);
+    --shadow-glow: 0 0 32px hsl(199 89% 55% / 0.4);
+    --shadow-colored: 0 10px 40px -10px hsl(199 89% 55% / 0.5);
+
+    --sidebar-background: 210 20% 8%;
+    --sidebar-foreground: 210 10% 95%;
+    --sidebar-primary: 199 89% 55%;
+    --sidebar-primary-foreground: 210 20% 6%;
+    --sidebar-accent: 210 20% 12%;
+    --sidebar-accent-foreground: 210 10% 95%;
+    --sidebar-border: 210 20% 16%;
+    --sidebar-ring: 199 89% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+}

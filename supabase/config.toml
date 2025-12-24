@@ -1,0 +1,32 @@
+project_id = "piqwbtnorcvpxaemeiki"
+
+# Stripe Webhook - Public endpoint (no JWT verification)
+[functions.stripe-webhook]
+verify_jwt = false
+
+# Payment Functions - Require authentication
+[functions.create-payment-intent]
+verify_jwt = true
+
+[functions.release-escrow]
+verify_jwt = true
+
+# AI Functions - Require authentication
+[functions.ai-enhance-mission]
+verify_jwt = true
+
+[functions.ai-profile-coach]
+verify_jwt = true
+
+[functions.ai-match-students]
+verify_jwt = true
+
+[functions.ai-score-application]
+verify_jwt = true
+
+[functions.ai-dashboard-insights]
+verify_jwt = true
+
+# FAQ Chat - Public endpoint (no authentication required)
+[functions.faq-chat]
+verify_jwt = false
